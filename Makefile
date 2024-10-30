@@ -36,7 +36,7 @@ git:
 	@echo "Initializing git repository if not initialized..."
 	@git init
 	@echo "Setting the remote repository URL..."
-	@-git remote add origin https://github.com/$(GIT_USERNAME)/$(REPO_NAME).git || echo "Remote origin already exists, skipping..."
+	@git remote add origin https://github.com/$(GIT_USERNAME)/$(REPO_NAME).git || echo "Remote origin already exists, skipping..."
 	@echo "Setting the branch to main..."
 	@git branch -M main
 	@git add .
