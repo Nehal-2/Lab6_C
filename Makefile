@@ -4,10 +4,10 @@ FILE ?= main
 SRC = $(TASK)/$(FILE).c
 EXEC = $(TASK)/$(FILE)
 COMMIT_MSG ?= "Initial commit"
-USERNAME ?= Nehal-2
+GIT_USERNAME ?= Nehal-2
 
 # Current directory name
-REPO_NAME := Labs6_C #$(shell basename $(shell pwd))
+REPO_NAME := $(shell basename $(shell pwd))
 
 # Default target: compile the C source files
 all: compile
@@ -36,7 +36,7 @@ git:
 	@echo "Initializing git repository if not initialized..."
 	@git init
 	@echo "Setting the remote repository URL..."
-	@-git remote add origin https://github.com/$(USERNAME)/$(REPO_NAME).git || echo "Remote origin already exists, skipping..."
+	@-git remote add origin https://github.com/$(GIT_USERNAME)/$(REPO_NAME).git || echo "Remote origin already exists, skipping..."
 	@echo "Setting the branch to main..."
 	@git branch -M main
 	@git add .
