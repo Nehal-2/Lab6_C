@@ -7,7 +7,7 @@ COMMIT_MSG ?= "Initial commit"
 USERNAME ?= Nehal-2
 
 # Current directory name
-REPO_NAME := $(shell basename $(shell pwd))
+REPO_NAME := Labs6_C #$(shell basename $(shell pwd))
 
 # Default target: compile the C source files
 all: compile
